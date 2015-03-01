@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project basedir="." default="run" name="ActiTimeFrameWork">
+<property name="src.path" value="src" />
+<property name="class.path" value="bin" />
+<path id="libs">
+<fileset dir="C:\Users\prakash\Desktop\Fww">
+<include name="*.jar" />
+</fileset>
+<pathelement path="${class.path}" />
+</path>
+<target name="compile">
+<javac debug="true" srcdir="${src.path}" destdir="${class.path}" classpathref="libs">
+</javac>
+</target>
+
+<target name="run" depends="compile">
+<taskdef resource="testngtasks" classpathref="libs"></taskdef>
+<testng outputdir="${testng.output}" classpathref="libs">
+<xmlfileset dir="." includes="testng.xml" />
+</testng>
+</target>
+</project>

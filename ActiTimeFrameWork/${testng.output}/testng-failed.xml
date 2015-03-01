@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" parallel="none">
+  <test name="Test(failed)" parallel="none">
+    <classes>
+      <class name="com.actitime.genericLib.ReportLib">
+        <methods>
+          <include name="takeScreenShot"/>
+        </methods>
+      </class> <!-- com.actitime.genericLib.ReportLib -->
+      <class name="com.actitime.reporttest.ReportTest">
+        <methods>
+          <include name="configAfterMtd"/>
+          <include name="configBeforeClass"/>
+          <include name="configBeforeMtd"/>
+          <include name="configAfterClass"/>
+        </methods>
+      </class> <!-- com.actitime.reporttest.ReportTest -->
+      <class name="com.actitime.projectandcustomerTest.ProjectAndCustomerTest">
+        <methods>
+          <include name="configAfterClass"/>
+          <include name="configBeforeMtd"/>
+          <include name="configBeforeClass"/>
+          <include name="configAfterMtd"/>
+        </methods>
+      </class> <!-- com.actitime.projectandcustomerTest.ProjectAndCustomerTest -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
